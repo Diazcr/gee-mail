@@ -1,18 +1,99 @@
 <html>
-	<head>
+	<head> <title>GEEMAIL</title>
 		<script src="js/mail-generator.js"></script>
 		<link href="css/style.css" rel="stylesheet" media="screen">
     <script>
-      window.onload = function(){
-        // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
-        // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
-        
-      };
+     window.onload = function (){
+
+function getNewMessage() {
+    setInterval(function(){ alert(); }, 10000);
+}
+	     function createRow(messages){
+	      	for (var i = 0; i < messages.length; 10000){
+	      		console.log (messages[i]);
+				console.log(messages[i].sender);
+				console.log(messages[i].body);
+				console.log(messages[i].subject);
+				console.log(messages[i].date);				
+
+function loadGeeMails(){
+	for (var i = 0; i < 10; i++){
+		var message = generateMessage();
+		window.geemails.push(message);
+		console.log (generateMessage[i]);
+				console.log(generateMessage[i].sender);
+				console.log(generateMessage[i].body);
+				console.log(generateMessage[i].subject);
+				console.log(generateMessage[i].date);
+
+	}
+}
+
+function generateMessage(date){
+	var message = {};
+	message.date = date || getRandomDate();
+	message.subject = getRandomElement(subject);
+	message.sender = getRandomElement(sender);
+	message.body = getRandomElement(body);
+	return message;
+}
+				var senderBox = document.createElement("div");
+				senderBox.className = "Sender";
+				senderBox.innerHTML = messages[i].sender;
+				 main.appendChild(senderBox);
+
+				 var subjectBox = document.createElement("div");
+		subjectBox.className = "Subject";
+		subjectBox.innerHTML = messages[i].subject;
+		main.appendChild(subjectBox);
+
+
+		var dateBox = document.createElement("div");
+		dateBox.className = "Date";
+		dateBox.innerHTML = messages[i].sender;
+		main.appendChild(dateBox);
+
+
+		var bodyBox = document.createElement("div");
+		bodyBox.className = "Body";
+		bodyBox.innerHTML = messages[i].body;
+		main.appendChild(bodyBox);
+
+
+
+var getNewMessage = function() {
+  (".like-button").click(function() {
+    (this).toggleClass("active");
+  });
+};
+
+				}
+}
+
+		 createRow(geemails);
+				}; 
+			    var newRow = document.createElement('div');
+			      	newRow.innerHTML = document.sender +" " + document.subject + " " + document.date + " "+ document.body;
+			      	var mainDiv = document.getElementById('main');
+			      	mainDiv.appendChild(newRow);
+			   
+			  //function loadGeeMails(){
+				//for (var i = 0; i < 10; i++){  
+	
+     // createRow('Chris','hello', 'may 13', 'body');
+   
+    
     </script>
 	</head>
 	<body>
-		<div class="container" id="main">
-			Build Me!
+		<h1>
+			GEEMAIL
+		</h1>
+		 <div class="container" id="main">
+		
+	
+			
 		</div>
+		
 	</body>
 </html>
