@@ -1,99 +1,365 @@
 <html>
-	<head> <title>GEEMAIL</title>
+	<head>
+		<hi>GEEMAIL</hi>
 		<script src="js/mail-generator.js"></script>
 		<link href="css/style.css" rel="stylesheet" media="screen">
     <script>
-     window.onload = function (){
+      window.onload = function(){
+//comment
 
-function getNewMessage() {
-    setInterval(function(){ alert(); }, 10000);
+//comment
+
+      	
+      	 function loadGeeMails(messages){
+					for (var i = 0; i <messages.length; i++){
+
+
+					console.log (messages[i]);
+					console.log(messages[i].sender);
+					console.log(messages[i].body);
+					console.log(messages[i].subject);
+					console.log(messages[i].date);
+
+					var emailBox = document.createElement("div");
+					emailBox.className = "email";
+					main.appendChild(emailBox);
+
+					var senderBox = document.createElement("div");
+					senderBox.className = "Sender";
+					senderBox.innerHTML = messages[i].sender;
+					emailBox.appendChild(senderBox);
+
+					var subjectBox = document.createElement("div");
+					subjectBox.className = "Subject";
+					subjectBox.innerHTML = messages[i].subject;
+					emailBox.appendChild(subjectBox);
+
+					var bodyBox = document.createElement("div");
+					bodyBox.className = "Body";
+					bodyBox.innerHTML = messages[i].body;
+					emailBox.appendChild(bodyBox);
+
+					var dateBox = document.createElement("div");
+					dateBox.className = "Date";
+					dateBox.innerHTML = messages[i].date;
+					emailBox.appendChild(dateBox);
+				}
+			}
+       			loadGeeMails(geemails);
+
+					function createRow(messages){
+       				for (var i = 0; i < messages.length; i++){
+
+       					console.log (messages[i]);
+						console.log(messages[i].sender);
+						console.log(messages[i].body);
+						console.log(messages[i].subject);
+						console.log(messages[i].date);
+
+							var emailBox = document.createElement("div");
+							emailBox.className = "email";
+							main.appendChild(emailBox);
+
+							var senderBox = document.createElement("div");
+							senderBox.className = "Sender";
+							senderBox.innerHTML = messages[i].sender;
+							emailBox.appendChild(senderBox);
+
+							var subjectBox = document.createElement("div");
+							subjectBox.className = "Subject";
+							subjectBox.innerHTML = messages[i].subject;
+							emailBox.appendChild(subjectBox);
+
+							var bodyBox = document.createElement("div");
+							bodyBox.className = "Body";
+							bodyBox.innerHTML = messages[i].body;
+							emailBox.appendChild(bodyBox);
+
+							var dateBox = document.createElement("div");
+							dateBox.className = "Date";
+							dateBox.innerHTML = messages[i].date;
+							emailBox.appendChild(dateBox);
+				}
+			}
+
+					createRow(geemails);
+
+					function printMail(print){
+						for (var i = 0; i <print.length; i++){
+
+							console.log(print.length);
+							console.log (messages[i]);
+							console.log(messages[i].sender);
+							console.log(messages[i].body);
+							console.log(messages[i].subject);
+							console.log(messages[i].date);
+
+							var emailBox = document.createElement("div");
+							emailBox.className = "email";
+							main.appendChild(emailBox);
+
+							var senderBox = document.createElement("div");
+							senderBox.className = "Sender";
+							senderBox.innerHTML = messages[i].sender;
+							emailBox.appendChild(senderBox);
+
+							var subjectBox = document.createElement("div");
+							subjectBox.className = "Subject";
+							subjectBox.innerHTML = messages[i].subject;
+							emailBox.appendChild(subjectBox);
+
+							var bodyBox = document.createElement("div");
+							bodyBox.className = "Body";
+							bodyBox.innerHTML = messages[i].body;
+							emailBox.appendChild(bodyBox);
+
+							var dateBox = document.createElement("div");
+							dateBox.className = "Date";
+							dateBox.innerHTML = messages[i].date;
+							emailBox.appendChild(dateBox);
+				}
+			}
+								printMail(print);
+
+								function getNewMessage(messages){
+								setInterval(loadMessage, 10000);
+	      						console.log (messages[i]);
+								console.log(messages[i].sender);
+								console.log(messages[i].body);
+								console.log(messages[i].subject);
+								console.log(messages[i].date);	
+
+							var emailBox = document.createElement("div");
+							emailBox.className = "email";
+							main.appendChild(emailBox);
+
+							var senderBox = document.createElement("div");
+							senderBox.className = "Sender";
+							senderBox.innerHTML = messages[i].sender;
+							emailBox.appendChild(senderBox);
+
+							var subjectBox = document.createElement("div");
+							subjectBox.className = "Subject";
+							subjectBox.innerHTML = messages[i].subject;
+							emailBox.appendChild(subjectBox);
+
+							var bodyBox = document.createElement("div");
+							bodyBox.className = "Body";
+							bodyBox.innerHTML = messages[i].body;
+							emailBox.appendChild(bodyBox);
+
+							var dateBox = document.createElement("div");
+							dateBox.className = "Date";
+							dateBox.innerHTML = messages[i].date;
+							emailBox.appendChild(dateBox);
+				}
+			}			
+
+							getNewMessage(geemails);	
+
+
+								function getRandomElement(arr){
+								return arr[Math.floor(Math.random() * arr.length)];
+
+					console.log (messages[i]);
+					console.log(messages[i].sender);
+					console.log(messages[i].body);
+					console.log(messages[i].subject);
+					console.log(messages[i].date);
+
+					var emailBox = document.createElement("div");
+					emailBox.className = "email";
+					main.appendChild(emailBox);
+
+					var senderBox = document.createElement("div");
+					senderBox.className = "Sender";
+					senderBox.innerHTML = messages[i].sender;
+					emailBox.appendChild(senderBox);
+
+					var subjectBox = document.createElement("div");
+					subjectBox.className = "Subject";
+					subjectBox.innerHTML = messages[i].subject;
+					emailBox.appendChild(subjectBox);
+
+					var bodyBox = document.createElement("div");
+					bodyBox.className = "Body";
+					bodyBox.innerHTML = messages[i].body;
+					emailBox.appendChild(bodyBox);
+
+					var dateBox = document.createElement("div");
+					dateBox.className = "Date";
+					dateBox.innerHTML = messages[i].date;
+					emailBox.appendChild(dateBox);
+				}
+			
+       			getRandomElement(geemails);
+
+       			function getRandomDate(){
+		var year = 2013;
+	var month = Math.floor(Math.random() * 12) + 1;
+	var day = Math.floor(Math.random() * 30) + 1;
+	var hours = Math.floor(Math.random() * 12) + 1;
+	var minutes = Math.floor(Math.random() * 59) + 1;
+	return new Date(year, month, day, hours, minutes);
+
+	console.log (messages[i]);
+					console.log(messages[i].sender);
+					console.log(messages[i].body);
+					console.log(messages[i].subject);
+					console.log(messages[i].date);
+
+					var emailBox = document.createElement("div");
+					emailBox.className = "email";
+					main.appendChild(emailBox);
+
+					var senderBox = document.createElement("div");
+					senderBox.className = "Sender";
+					senderBox.innerHTML = messages[i].sender;
+					emailBox.appendChild(senderBox);
+
+					var subjectBox = document.createElement("div");
+					subjectBox.className = "Subject";
+					subjectBox.innerHTML = messages[i].subject;
+					emailBox.appendChild(subjectBox);
+
+					var bodyBox = document.createElement("div");
+					bodyBox.className = "Body";
+					bodyBox.innerHTML = messages[i].body;
+					emailBox.appendChild(bodyBox);
+
+					var dateBox = document.createElement("div");
+					dateBox.className = "Date";
+					dateBox.innerHTML = messages[i].date;
+					emailBox.appendChild(dateBox);
 }
-	     function createRow(messages){
+
+					getRandomDate(geemails);
+
+					var bodyMessage = document.getElementsByClassName('Subject');
+					for (var i = 0; i < bodyMessage.length; i++) {
+					bodyMessage[i].addEventListener('click', toggle);
+}
+
+					
+						function toggle(){
+									var displayMessage = this.querySelectorAll(".body")
+									[0];
+									console.log("this", this); //refers to email box
+									if(displayMessage.style.display === 'none'){
+										displayMessage.style.display = 'block';
+									}else{
+									displayMessage.style.display = 'none';
+								}
+
+							}
+									setInterval(loadMessage, 10000)
+									var newRow = document.createElement('div');
+			     					newRow.innerHTML = document.sender +" " + document.subject + " " + document.date + " "+ document.body;
+			      					var mainDiv = document.getElementById('main');
+			      					mainDiv.appendChild(newRow);
+
+      
+        // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
+        // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
+
+				 
+
+       			
+
+					
+
+						
+
+
+
+		/*	var bodyMsg = document.getElementByClassName('emailBox');
+				for (var i = 0; i < bodyMsg.length; i++) {
+				bodyMsg[i].addEventListener('click', toggle);
+}
+
+					function toggle(){
+						var display Mesg = this.querySelectorAll('.body')
+						[0];
+					console.log("this", this); //refers to email box
+					if(displayMessage.style.display === 'none'){
+					displayMessage.style.display = 'block';
+					}else}
+					displayMessage.style.display = 'none';
+	}
+}
+
+
+					setInterval(loadMessage, 10000); // load messages every 10 secs
+
+/*
+//};		/* function createRow(messages){
 	      	for (var i = 0; i < messages.length; 10000){
 	      		console.log (messages[i]);
 				console.log(messages[i].sender);
 				console.log(messages[i].body);
 				console.log(messages[i].subject);
-				console.log(messages[i].date);				
+				console.log(messages[i].date);
 
-function loadGeeMails(){
-	for (var i = 0; i < 10; i++){
-		var message = generateMessage();
-		window.geemails.push(message);
-		console.log (generateMessage[i]);
-				console.log(generateMessage[i].sender);
-				console.log(generateMessage[i].body);
-				console.log(generateMessage[i].subject);
-				console.log(generateMessage[i].date);
+					var senderBox = document.createElement("div");
+					senderBox.className = "Sender";
+					senderBox.innerHTML = messages[i].sender;
+					main.appendChild(senderBox);
 
-	}
-}
+					var subjectBox = document.createElement("div");
+					subjectBox.className = "Subject";
+					subjectBox.innerHTML = messages[i].subject;
+					main.appendChild(subjectBox);
 
-function generateMessage(date){
-	var message = {};
-	message.date = date || getRandomDate();
-	message.subject = getRandomElement(subject);
-	message.sender = getRandomElement(sender);
-	message.body = getRandomElement(body);
-	return message;
-}
-				var senderBox = document.createElement("div");
-				senderBox.className = "Sender";
-				senderBox.innerHTML = messages[i].sender;
-				 main.appendChild(senderBox);
+					var dateBox = document.createElement("div");
+					dateBox.className = "Date";
+					dateBox.innerHTML = messages[i].date;
+					main.appendChild(dateBox);
 
-				 var subjectBox = document.createElement("div");
-		subjectBox.className = "Subject";
-		subjectBox.innerHTML = messages[i].subject;
-		main.appendChild(subjectBox);
+					var bodyBox = document.createElement("div");
+					bodyBox.className = "Body";
+					bodyBox.innerHTML = messages[i].body;
+					main.appendChild(bodyBox);
 
 
-		var dateBox = document.createElement("div");
-		dateBox.className = "Date";
-		dateBox.innerHTML = messages[i].sender;
-		main.appendChild(dateBox);
+		
 
+/**//*
+					var senderBox = document.createElement("div");
+					senderBox.className = "Sender";
+					senderBox.innerHTML = messages[i].sender;
+					main.appendChild(senderBox);
 
-		var bodyBox = document.createElement("div");
-		bodyBox.className = "Body";
-		bodyBox.innerHTML = messages[i].body;
-		main.appendChild(bodyBox);
+					var subjectBox = document.createElement("div");
+					subjectBox.className = "Subject";
+					subjectBox.innerHTML = messages[i].subject;
+					main.appendChild(subjectBox);
 
+					var dateBox = document.createElement("div");
+					dateBox.className = "Date";
+					dateBox.innerHTML = messages[i].date;
+					main.appendChild(dateBox);
 
+					var bodyBox = document.createElement("div");
+					bodyBox.className = "Body";
+					bodyBox.innerHTML = messages[i].body;
+					main.appendChild(bodyBox);
 
-var getNewMessage = function() {
-  (".like-button").click(function() {
-    (this).toggleClass("active");
-  });
-};
-
-				}
-}
-
-		 createRow(geemails);
-				}; 
-			    var newRow = document.createElement('div');
-			      	newRow.innerHTML = document.sender +" " + document.subject + " " + document.date + " "+ document.body;
-			      	var mainDiv = document.getElementById('main');
-			      	mainDiv.appendChild(newRow);
-			   
-			  //function loadGeeMails(){
-				//for (var i = 0; i < 10; i++){  
+*/
 	
-     // createRow('Chris','hello', 'may 13', 'body');
-   
-    
+
+
+
     </script>
 	</head>
 	<body>
-		<h1>
-			GEEMAIL
-		</h1>
-		 <div class="container" id="main">
-		
-	
+		<div class="container" id="main">
+			<div class="emailBox"> </div>
+			<div class="inboxCount">you have: 10 messages</div>
+
+								
 			
+
 		</div>
-		
+
 	</body>
 </html>

@@ -1,0 +1,234 @@
+<html>
+	<head> <title>GEEMAIL</title>
+		<script src="js/mail-generator.js"></script>
+		<link href="css/style.css" rel="stylesheet" media="screen">
+    <script>
+     window.onload = function (){
+
+     	function loadGeeMails(){
+		for (var i = 0; i < 10; i++){
+		var message = generateMessage();
+		window.geemails.push(message);
+
+		 function createRow(messages){
+	      	for (var i = 0; i < messages.length; 10000){
+	      		console.log (messages[i]);
+				console.log(messages[i].sender);
+				console.log(messages[i].body);
+				console.log(messages[i].subject);
+				console.log(messages[i].date);
+
+					var senderBox = document.createElement("div");
+					senderBox.className = "Sender";
+					senderBox.innerHTML = messages[i].sender;
+					main.appendChild(senderBox);
+
+					var subjectBox = document.createElement("div");
+					subjectBox.className = "Subject";
+					subjectBox.innerHTML = messages[i].subject;
+					main.appendChild(subjectBox);
+
+					var dateBox = document.createElement("div");
+					dateBox.className = "Date";
+					dateBox.innerHTML = messages[i].date;
+					main.appendChild(dateBox);
+
+					var bodyBox = document.createElement("div");
+					bodyBox.className = "Body";
+					bodyBox.innerHTML = messages[i].body;
+					main.appendChild(bodyBox);
+
+
+
+
+
+	}
+}
+
+
+
+
+
+
+function getNewMessage() {
+    setInterval(function(){ alert(); }, 10000);
+}
+	     function createRow(messages){
+	      	for (var i = 0; i < messages.length; 10000){
+	      		console.log (messages[i]);
+				console.log(messages[i].sender);
+				console.log(messages[i].body);
+				console.log(messages[i].subject);
+				console.log(messages[i].date);				
+
+function printMail(print){
+	for (var i = 0; i <print.length; i++){
+		//var message = generateMessage();
+		//window.geemails.push(message);
+		console.log (generateMessage[i]);
+			console.log(print.length); //geemails.length
+				console.log(generateMessage[i].sender);
+				console.log(generateMessage[i].body);
+				console.log(generateMessage[i].subject);
+				console.log(generateMessage[i].date);
+
+	}
+}
+
+function generateMessage(date){
+	var message = {};
+	message.date = date || getRandomDate();
+	message.subject = getRandomElement(subject);
+	message.sender = getRandomElement(sender);
+	message.body = getRandomElement(body);
+	return message;
+
+}
+
+
+				var senderBox = document.createElement("div");
+				senderBox.className = "Sender";
+				senderBox.innerHTML = messages[i].sender;
+				 main.appendChild(senderBox);
+
+		var subjectBox = document.createElement("div");
+		subjectBox.className = "Subject";
+		subjectBox.innerHTML = messages[i].subject;
+		main.appendChild(subjectBox);
+
+
+		var dateBox = document.createElement("div");
+		dateBox.className = "Date";
+		dateBox.innerHTML = messages[i].date;
+		main.appendChild(dateBox);
+
+
+		var bodyBox = document.createElement("div");
+		bodyBox.className = "Body";
+		bodyBox.innerHTML = messages[i].body;
+		main.appendChild(bodyBox);
+
+	}
+
+}
+
+		printMail(geemails);
+
+		var inboxCount = document.getElementById("main");
+		inboxCount.innerHTML = geemails[i].length;
+		sidebar.appendChild(inboxCount);
+
+//div id="inbox">you have:10 messages
+
+// DIFF INBOX THING
+//var inboxCount = document.createElement('div');
+//inboxCount.id = "count";
+//inboxCount.innerHTML = "inbox: " + geemails.length;
+//main.appendChild(inboxCount);
+
+
+
+
+//add event listenerto email container to toggle body message
+
+//var bodyMsg = document.getElementByClassName('emailBox');
+//for (var i = 0; i < bodyMsg.length; i++) {
+	//bodyMsg[i].addEventListener('click', toggle);
+}
+
+
+	}
+}
+
+
+//setInterval(loadMessage, 10000); // load messages every 10 secs
+
+
+								//div id="inbox">you have:10 messages
+
+								//var inboxCount = document.getElementById("main");
+								//inboxCount.innerHTML = geemails.length;
+								//sidebar.appendChild(inboxCount);
+
+								/*function toggle(){
+									var display Mesg = this.querySelectorAll(".body")
+									[0];
+									console.log(messages[i].body); //refers to email box
+									if(displayMessage.style.display === 'none'){
+										displayMessage.style.display = 'block';
+									}else}
+									displayMessage.style.display = 'none';
+
+
+
+
+
+
+/*              createRow(subject);
+				var newRow = document.createElement('div');
+			  	newRow.innerHTML = document.sender +" " + document.subject + " " + document.date + " "+ document.body;
+			  	var mainDiv = document.getElementById('main');
+			  	mainDiv.appendChild(newRow);
+
+			  	createRow(body);
+				var newRow = document.createElement('div');
+			  	newRow.innerHTML = document.sender +" " + document.subject + " " + document.date + " "+ document.body;
+			  	var mainDiv = document.getElementById('main');
+			  	mainDiv.appendChild(newRow);*/
+
+
+//var displayMessage = document.getElementByClassName('sender');
+//for(var i = 0; i < displayMessage.length; i++){
+//	displayMessage[i].addEventListener("click", showBody);
+
+
+//function showBody(){
+	// if else statement
+//	var bodyDisplay = this.querySelectorAll('.body')[0];
+//	if(bodyDisplay[0].style.display)
+
+
+//}
+
+//showBody();
+
+
+
+//var getNewMessage = function() {
+  //(".like-button").click(function() {
+    //(this).toggleClass("active");
+ // });//
+//};
+				
+
+
+		 //createRow(geemails);
+				 
+			//    var newRow = document.createElement('div');
+			  //    	newRow.innerHTML = document.sender +" " + document.subject + " " + document.date + " "+ document.body;
+			    //  	var mainDiv = document.getElementById('main');
+			      //	mainDiv.appendChild(newRow);
+			   
+			  //function loadGeeMails(){
+				//for (var i = 0; i < 10; i++){  
+	
+     // createRow('Chris','hello', 'may 13', 'body');
+   
+    
+    </script>
+	</head>
+	<body>
+		<h1>
+			GEEMAIL
+		</h1>
+		 <div class="container" id="main"> </div>
+		 	<div class="emailBox"> </div>
+
+
+		
+	
+			
+		
+		
+	</body>
+</html>
